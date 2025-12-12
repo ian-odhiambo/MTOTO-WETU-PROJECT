@@ -11,754 +11,803 @@
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="bg-gray-200 min-h-screen flex">
-    <!-- Vertical Left Sidebar Navigation -->
-    <aside
-      id="sidebar"
-      class="sidebar-expanded bg-blue-100 shadow-lg flex flex-col fixed h-full z-20 transition-all duration-300"
-    >
-      <!-- Logo -->
-      <div class="p-6 border-b border-gray-100 flex items-center">
-        <div class="bg-primary-500 rounded-lg p-2 mr-3">
-          <i class="fas fa-graduation-cap text-blue-300 text-xl"></i>
+
+  <body class="bg-gray-200 min-h-screen flex flex-col">
+    <!-- New Header Section -->
+    <header class="bg-white shadow">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <div class="flex items-center">
+          <h1 class="text-2xl font-bold text-gray-800">Mtoto Wetu</h1>
         </div>
-        <div>
-          <h1 class="text-xl font-bold text-gray-800">Special Learner</h1>
-          <p class="text-xs text-gray-500">MtotoWetu Dashboard</p>
-        </div>
-        <button
-          id="toggle-sidebar"
-          class="ml-auto text-gray-500 hover:text-primary-500"
-        >
-          <i class="fas fa-chevron-left"></i>
-        </button>
-      </div>
 
-      <!-- Student Profile -->
-      <div class="p-4 border-b border-gray-100 flex items-center">
-        <div class="relative">
-          <img
-            src="IMAGE/color.jpg"
-            alt="Student"
-            class="w-12 h-12 rounded-full object-cover border-2 border-primary-100"
-          />
-          <div
-            class="absolute bottom-0 right-0 w-4 h-4 bg-green-500 rounded-full border-2 border-white"
-          ></div>
-        </div>
-        <div class="ml-3">
-          <h3 class="font-medium text-gray-800">Ian Odhiambo</h3>
-          <p class="text-sm text-gray-500">Age: 8 | Autism Spectrum</p>
-        </div>
-      </div>
-
-      <!-- Navigation Menu -->
-      <nav class="flex-1 p-4 overflow-y-auto bg-blue-200">
-        <ul class="space-y-1">
-          <!-- Dashboard Link -->
-          <li>
-            <a
-              href="#"
-              class="flex items-center p-3 text-primary-600 bg-primary-50 rounded-lg"
-            >
-              <i class="fas fa-tachometer-alt w-6 text-center"></i>
-              <span class="ml-3 font-medium">Dashboard</span>
-            </a>
-          </li>
-
-          <!-- Analytics & Progress -->
-          <li class="mt-4">
-            <button
-              class="nav-dropdown flex items-center justify-between w-full p-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
-            >
-              <div class="flex items-center">
-                <i class="fas fa-chart-line w-6 text-center"></i>
-                <span class="ml-3 font-medium">Analytics & Progress</span>
-              </div>
-              <i class="fas fa-chevron-down text-xs transition-transform"></i>
-            </button>
-            <ul class="nav-dropdown-content pl-10 mt-1 space-y-1 hidden">
-              <li>
-                <a
-                  href="#"
-                  class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
-                  >Learning Progress</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
-                  >Skill Development</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
-                  >Behavior Tracking</a
-                >
-              </li>
-            </ul>
-          </li>
-
-          <!-- E-Learning Modules -->
-          <li>
-            <button
-              class="nav-dropdown flex items-center justify-between w-full p-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
-            >
-              <div class="flex items-center">
-                <i class="fas fa-video w-6 text-center"></i>
-                <span class="ml-3 font-medium">E-Learning Modules</span>
-              </div>
-              <i class="fas fa-chevron-down text-xs transition-transform"></i>
-            </button>
-            <ul class="nav-dropdown-content pl-10 mt-1 space-y-1 hidden">
-              <li>
-                <a
-                  href="#"
-                  class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
-                  >All Modules</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
-                  >Completed</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
-                  >In Progress</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
-                  >Upcoming</a
-                >
-              </li>
-            </ul>
-          </li>
-
-          <!-- Gamified Learning -->
-          <li>
-            <button
-              class="nav-dropdown flex items-center justify-between w-full p-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
-            >
-              <div class="flex items-center">
-                <i class="fas fa-gamepad w-6 text-center"></i>
-                <span class="ml-3 font-medium">Gamified Learning</span>
-              </div>
-              <i class="fas fa-chevron-down text-xs transition-transform"></i>
-            </button>
-            <ul class="nav-dropdown-content pl-10 mt-1 space-y-1 hidden">
-              <li>
-                <a
-                  href="#"
-                  class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
-                  >All Games</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
-                  >Math Games</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
-                  >Language Games</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
-                  >Social Skills</a
-                >
-              </li>
-            </ul>
-          </li>
-
-          <!-- Parent Resources -->
-          <li>
-            <button
-              class="nav-dropdown flex items-center justify-between w-full p-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
-            >
-              <div class="flex items-center">
-                <i class="fas fa-life-ring w-6 text-center"></i>
-                <span class="ml-3 font-medium">Parent Resources</span>
-              </div>
-              <i class="fas fa-chevron-down text-xs transition-transform"></i>
-            </button>
-            <ul class="nav-dropdown-content pl-10 mt-1 space-y-1 hidden">
-              <li>
-                <a
-                  href="#"
-                  class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
-                  >Guides & Tips</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
-                  >Therapist Contacts</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
-                  >Support Groups</a
-                >
-              </li>
-            </ul>
-          </li>
-
-          <!-- Settings -->
-          <li class="mt-8">
-            <a
-              href="#"
-              class="flex items-center p-3 text-gray-700 hover:bg-gray-50 rounded-lg"
-            >
-              <i class="fas fa-cog w-6 text-center"></i>
-              <span class="ml-3 font-medium">Settings</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <!-- Logout -->
-      <div class="p-4 border-t border-gray-100">
-        <a
-          href="#"
-          class="flex items-center p-3 text-gray-700 hover:bg-gray-50 rounded-lg"
-        >
-          <i class="fas fa-sign-out-alt w-6 text-center"></i>
-          <span class="ml-3 font-medium">Logout</span>
-        </a>
-      </div>
-    </aside>
-
-    <!-- Main Content Area -->
-    <main class="flex-1 ml-0 lg:ml-64 transition-all duration-300 p-4 lg:p-8">
-      <!-- Header -->
-      <header class="mb-8">
-        <h2 class="text-2xl lg:text-3xl font-bold text-gray-800">
-          Welcome back, Ian!
-        </h2>
-        <p class="text-gray-600 mt-2">
-          Track learning progress and explore new activities
-        </p>
-
-        <!-- Date and Notifications -->
-        <div class="flex flex-wrap justify-between items-center mt-6">
-          <div class="flex items-center bg-white p-3 rounded-lg shadow-sm">
-            <i class="fas fa-calendar-day text-primary-500 mr-2"></i>
-            <span class="text-gray-700" id="current-date"></span>
-          </div>
-          <div class="flex items-center space-x-4 mt-4 lg:mt-0">
-            <button
-              class="relative p-2 bg-white rounded-lg shadow-sm hover:shadow"
-            >
-              <i class="fas fa-bell text-gray-600"></i>
-              <span
-                class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"
-              ></span>
-            </button>
-            <button class="p-2 bg-white rounded-lg shadow-sm hover:shadow">
-              <i class="fas fa-question-circle text-gray-600"></i>
-            </button>
-          </div>
-        </div>
-      </header>
-
-      <!-- Hero Section - Learning Packages -->
-      <section class="mb-12">
-        <h3 class="text-xl font-bold text-gray-800 mb-6">Learning Packages</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Physical Education Package -->
-          <div
-            class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6 shadow-sm border border-blue-100"
+        <!-- Navigation -->
+        <nav class="hidden md:flex space-x-6">
+          <a href="landingpage.html" class="text-gray-600 hover:text-blue-600 font-medium"
+            >Homepage</a
           >
-            <div class="flex items-center mb-4">
-              <div class="bg-blue-500 p-3 rounded-lg mr-4">
-                <i class="fas fa-running text-white text-2xl"></i>
-              </div>
-              <h4 class="text-lg font-bold text-gray-800">
-                Physical Education
-              </h4>
-            </div>
-            <p class="text-gray-600 mb-4">
-              Adapted exercise videos for motor skill development and
-              coordination.
-            </p>
-            <a
-              href="#"
-              class="text-blue-600 font-medium inline-flex items-center hover:text-blue-800"
-            >
-              Explore Videos <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-
-          <!-- Instructor-Led Activities -->
-          <div
-            class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 shadow-sm border border-purple-100"
+          <a href="tutor.html" class="text-gray-600 hover:text-blue-600 font-medium"
+            >Tutor Dashboard</a
           >
-            <div class="flex items-center mb-4">
-              <div class="bg-purple-500 p-3 rounded-lg mr-4">
-                <i class="fas fa-chalkboard-teacher text-white text-2xl"></i>
-              </div>
-              <h4 class="text-lg font-bold text-gray-800">
-                Instructor-Led Activities
-              </h4>
-            </div>
-            <p class="text-gray-600 mb-4">
-              Live and recorded sessions with special education instructors.
-            </p>
-            <a
-              href="#"
-              class="text-purple-600 font-medium inline-flex items-center hover:text-purple-800"
-            >
-              Join Sessions <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-
-          <!-- Gamified Learning -->
-          <div
-            class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6 shadow-sm border border-green-100"
+          <a href="student.html" class="text-gray-600 hover:text-blue-600 font-medium"
+            >Student Dashboard</a
           >
-            <div class="flex items-center mb-4">
-              <div class="bg-green-500 p-3 rounded-lg mr-4">
-                <i class="fas fa-gamepad text-white text-2xl"></i>
-              </div>
-              <h4 class="text-lg font-bold text-gray-800">Gamified Learning</h4>
-            </div>
-            <p class="text-gray-600 mb-4">
-              Interactive games designed to build cognitive and social skills.
-            </p>
-            <a
-              href="#"
-              class="text-green-600 font-medium inline-flex items-center hover:text-green-800"
-            >
-              Play Games <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- E-Learning Progress Analytics -->
-      <section class="mb-12">
-        <div class="flex justify-between items-center mb-6">
-          <h3 class="text-xl font-bold text-gray-800">E-Learning Progress</h3>
           <a
             href="#"
-            class="text-primary-600 font-medium hover:text-primary-800"
-            >View All Modules</a
+            class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+            >Login</a
           >
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button class="md:hidden text-gray-600">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Your existing dashboard content (unchanged) -->
+    <div class="flex flex-1">
+      <!-- Vertical Left Sidebar Navigation -->
+      <aside
+        id="sidebar"
+        class="sidebar-expanded bg-blue-100 shadow-lg flex flex-col fixed h-full z-20 transition-all duration-300"
+      >
+        <!-- Logo -->
+        <div class="p-6 border-b border-gray-100 flex items-center">
+          <div class="bg-primary-500 rounded-lg p-2 mr-3">
+            <i class="fas fa-graduation-cap text-blue-300 text-xl"></i>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-gray-800">Mtoto Wetu</h1>
+            <p class="text-xs text-gray-500">
+              Motto: Identify, educate, connect
+            </p>
+          </div>
+          <button
+            id="toggle-sidebar"
+            class="ml-auto text-gray-500 hover:text-primary-500"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
         </div>
 
-        <!-- Overall Progress -->
-        <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
-          <h4 class="text-lg font-semibold text-gray-800 mb-4">
-            Overall Progress
-          </h4>
-          <div class="mb-2 flex justify-between">
-            <span class="text-gray-700">Completed: 12 of 20 modules</span>
-            <span class="font-bold text-primary-600">60%</span>
-          </div>
-          <div class="w-full bg-gray-200 rounded-full h-4">
+        <!-- Student Profile -->
+        <div class="p-4 border-b border-gray-100 flex items-center">
+          <div class="relative">
+            <img
+              src="IMAGE/color.jpg"
+              alt="Student"
+              class="w-12 h-12 rounded-full object-cover border-2 border-primary-100"
+            />
             <div
-              class="bg-gradient-to-r from-primary-500 to-primary-600 h-4 rounded-full progress-bar-fill"
-              style="width: 60%"
+              class="absolute bottom-0 right-0 w-4 h-4 bg-green-500 rounded-full border-2 border-white"
             ></div>
           </div>
+          <div class="ml-3">
+            <h3 class="font-medium text-gray-800">Ian Odhiambo</h3>
+            <p class="text-sm text-gray-500">Age: 8 | Autism Spectrum</p>
+          </div>
         </div>
 
-        <!-- Module Progress -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <!-- Module 1 -->
-          <div
-            class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-blue-500"
-          >
-            <div class="flex justify-between items-start mb-4">
-              <div>
-                <h4 class="text-lg font-semibold text-gray-800">
-                  Social Skills
-                </h4>
-                <p class="text-gray-600 text-sm">5 video lessons</p>
-              </div>
-              <span
-                class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full"
-                >Completed</span
+        <!-- Navigation Menu -->
+        <nav class="flex-1 p-4 overflow-y-auto bg-blue-200">
+          <ul class="space-y-1">
+            <!-- Dashboard Link -->
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-3 text-primary-600 bg-primary-50 rounded-lg"
               >
+                <i class="fas fa-tachometer-alt w-6 text-center"></i>
+                <span class="ml-3 font-medium">Dashboard</span>
+              </a>
+            </li>
+
+            <!-- Analytics & Progress -->
+            <li class="mt-4">
+              <button
+                class="nav-dropdown flex items-center justify-between w-full p-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
+              >
+                <div class="flex items-center">
+                  <i class="fas fa-chart-line w-6 text-center"></i>
+                  <span class="ml-3 font-medium">Analytics & Progress</span>
+                </div>
+                <i class="fas fa-chevron-down text-xs transition-transform"></i>
+              </button>
+              <ul class="nav-dropdown-content pl-10 mt-1 space-y-1 hidden">
+                <li>
+                  <a
+                    href="#"
+                    class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
+                    >Learning Progress</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
+                    >Skill Development</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
+                    >Behavior Tracking</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- E-Learning Modules -->
+            <li>
+              <button
+                class="nav-dropdown flex items-center justify-between w-full p-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
+              >
+                <div class="flex items-center">
+                  <i class="fas fa-video w-6 text-center"></i>
+                  <span class="ml-3 font-medium">E-Learning Modules</span>
+                </div>
+                <i class="fas fa-chevron-down text-xs transition-transform"></i>
+              </button>
+              <ul class="nav-dropdown-content pl-10 mt-1 space-y-1 hidden">
+                <li>
+                  <a
+                    href="#"
+                    class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
+                    >All Modules</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
+                    >Completed</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
+                    >In Progress</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
+                    >Upcoming</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Gamified Learning -->
+            <li>
+              <button
+                class="nav-dropdown flex items-center justify-between w-full p-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
+              >
+                <div class="flex items-center">
+                  <i class="fas fa-gamepad w-6 text-center"></i>
+                  <span class="ml-3 font-medium">Gamified Learning</span>
+                </div>
+                <i class="fas fa-chevron-down text-xs transition-transform"></i>
+              </button>
+              <ul class="nav-dropdown-content pl-10 mt-1 space-y-1 hidden">
+                <li>
+                  <a
+                    href="#"
+                    class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
+                    >All Games</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
+                    >Math Games</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
+                    >Language Games</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
+                    >Social Skills</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Parent Resources -->
+            <li>
+              <button
+                class="nav-dropdown flex items-center justify-between w-full p-3 text-gray-700 hover:bg-gray-50 rounded-lg transition-colors"
+              >
+                <div class="flex items-center">
+                  <i class="fas fa-life-ring w-6 text-center"></i>
+                  <span class="ml-3 font-medium">Parent Resources</span>
+                </div>
+                <i class="fas fa-chevron-down text-xs transition-transform"></i>
+              </button>
+              <ul class="nav-dropdown-content pl-10 mt-1 space-y-1 hidden">
+                <li>
+                  <a
+                    href="#"
+                    class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
+                    >Guides & Tips</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
+                    >Therapist Contacts</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block p-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded"
+                    >Support Groups</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Settings -->
+            <li class="mt-8">
+              <a
+                href="#"
+                class="flex items-center p-3 text-gray-700 hover:bg-gray-50 rounded-lg"
+              >
+                <i class="fas fa-cog w-6 text-center"></i>
+                <span class="ml-3 font-medium">Settings</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Logout -->
+        <div class="p-4 border-t border-gray-100">
+          <a
+            href="#"
+            class="flex items-center p-3 text-gray-700 hover:bg-gray-50 rounded-lg"
+          >
+            <i class="fas fa-sign-out-alt w-6 text-center"></i>
+            <span class="ml-3 font-medium">Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main
+        class="flex-1 ml-0 lg:ml-64 transition-all duration-300 p-4 lg:p-8 mt-0"
+      >
+        <!-- Header -->
+        <header class="mb-8">
+          <h2 class="text-2xl lg:text-3xl font-bold text-gray-800">
+            Welcome back, Ian!
+          </h2>
+          <p class="text-gray-600 mt-2">
+            Track learning progress and explore new activities
+          </p>
+
+          <!-- Date and Notifications -->
+          <div class="flex flex-wrap justify-between items-center mt-6">
+            <div class="flex items-center bg-white p-3 rounded-lg shadow-sm">
+              <i class="fas fa-calendar-day text-primary-500 mr-2"></i>
+              <span class="text-gray-700" id="current-date"></span>
             </div>
-            <div class="mb-4">
-              <div class="flex justify-between text-sm mb-1">
-                <span>Progress</span>
-                <span>100%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2">
-                <div
-                  class="bg-blue-500 h-2 rounded-full"
-                  style="width: 100%"
-                ></div>
-              </div>
-            </div>
-            <p class="text-gray-600 mb-4">
-              Learn about emotions, greetings, and sharing with others.
-            </p>
-            <div class="flex justify-between items-center">
-              <div class="flex items-center text-gray-600">
-                <i class="fas fa-play-circle mr-2 text-blue-500"></i>
-                <span class="text-sm">5 videos completed</span>
-              </div>
-              <button class="text-blue-600 font-medium hover:text-blue-800">
-                Unlocked: Social Game
+            <div class="flex items-center space-x-4 mt-4 lg:mt-0">
+              <button
+                class="relative p-2 bg-white rounded-lg shadow-sm hover:shadow"
+              >
+                <i class="fas fa-bell text-gray-600"></i>
+                <span
+                  class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"
+                ></span>
+              </button>
+              <button class="p-2 bg-white rounded-lg shadow-sm hover:shadow">
+                <i class="fas fa-question-circle text-gray-600"></i>
               </button>
             </div>
           </div>
+        </header>
 
-          <!-- Module 2 -->
-          <div
-            class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-green-500"
-          >
-            <div class="flex justify-between items-start mb-4">
-              <div>
-                <h4 class="text-lg font-semibold text-gray-800">Basic Math</h4>
-                <p class="text-gray-600 text-sm">8 video lessons</p>
-              </div>
-              <span
-                class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full"
-                >In Progress</span
-              >
-            </div>
-            <div class="mb-4">
-              <div class="flex justify-between text-sm mb-1">
-                <span>Progress</span>
-                <span>75%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2">
-                <div
-                  class="bg-green-500 h-2 rounded-full"
-                  style="width: 75%"
-                ></div>
-              </div>
-            </div>
-            <p class="text-gray-600 mb-4">
-              Counting, addition, and recognizing numbers.
-            </p>
-            <div class="flex justify-between items-center">
-              <div class="flex items-center text-gray-600">
-                <i class="fas fa-play-circle mr-2 text-green-500"></i>
-                <span class="text-sm">6/8 videos completed</span>
-              </div>
-              <span class="text-gray-500 text-sm"
-                >Complete module to unlock game</span
-              >
-            </div>
-          </div>
-
-          <!-- Module 3 -->
-          <div
-            class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-purple-500"
-          >
-            <div class="flex justify-between items-start mb-4">
-              <div>
-                <h4 class="text-lg font-semibold text-gray-800">
-                  Language Development
-                </h4>
-                <p class="text-gray-600 text-sm">6 video lessons</p>
-              </div>
-              <span
-                class="bg-purple-100 text-purple-800 text-xs font-medium px-3 py-1 rounded-full"
-                >Not Started</span
-              >
-            </div>
-            <div class="mb-4">
-              <div class="flex justify-between text-sm mb-1">
-                <span>Progress</span>
-                <span>0%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2">
-                <div
-                  class="bg-purple-500 h-2 rounded-full"
-                  style="width: 0%"
-                ></div>
-              </div>
-            </div>
-            <p class="text-gray-600 mb-4">
-              Vocabulary building and sentence formation.
-            </p>
-            <div class="flex justify-between items-center">
-              <div class="flex items-center text-gray-600">
-                <i class="fas fa-play-circle mr-2 text-purple-500"></i>
-                <span class="text-sm">0/6 videos completed</span>
-              </div>
-              <span class="text-gray-500 text-sm"
-                >Complete module to unlock game</span
-              >
-            </div>
-          </div>
-
-          <!-- Module 4 -->
-          <div
-            class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-yellow-500"
-          >
-            <div class="flex justify-between items-start mb-4">
-              <div>
-                <h4 class="text-lg font-semibold text-gray-800">
-                  Daily Living Skills
-                </h4>
-                <p class="text-gray-600 text-sm">4 video lessons</p>
-              </div>
-              <span
-                class="bg-yellow-100 text-yellow-800 text-xs font-medium px-3 py-1 rounded-full"
-                >In Progress</span
-              >
-            </div>
-            <div class="mb-4">
-              <div class="flex justify-between text-sm mb-1">
-                <span>Progress</span>
-                <span>50%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2">
-                <div
-                  class="bg-yellow-500 h-2 rounded-full"
-                  style="width: 50%"
-                ></div>
-              </div>
-            </div>
-            <p class="text-gray-600 mb-4">
-              Brushing teeth, getting dressed, and basic chores.
-            </p>
-            <div class="flex justify-between items-center">
-              <div class="flex items-center text-gray-600">
-                <i class="fas fa-play-circle mr-2 text-yellow-500"></i>
-                <span class="text-sm">2/4 videos completed</span>
-              </div>
-              <span class="text-gray-500 text-sm"
-                >Complete module to unlock game</span
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Gamified Learning Section -->
-      <section>
-        <div class="flex justify-between items-center mb-6">
-          <h3 class="text-xl font-bold text-gray-800">
-            Gamified Learning Activities
+        <!-- Hero Section - Learning Packages -->
+        <section class="mb-12">
+          <h3 class="text-xl font-bold text-gray-800 mb-6">
+            Learning Packages
           </h3>
-          <a
-            href="#"
-            class="text-primary-600 font-medium hover:text-primary-800"
-            >View All Games</a
-          >
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Game 1 -->
-          <div
-            class="bg-white rounded-xl shadow-sm overflow-hidden card-hover transition-all duration-300"
-          >
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Physical Education Package -->
             <div
-              class="h-40 bg-gradient-to-r from-blue-400 to-cyan-400 relative overflow-hidden"
+              class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6 shadow-sm border border-blue-100"
             >
-              <div
-                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')] bg-cover bg-center opacity-30"
-              ></div>
-              <div class="absolute top-4 left-4">
-                <span
-                  class="bg-blue-600 text-white text-xs font-medium px-3 py-1 rounded-full"
-                  >Unlocked</span
-                >
+              <div class="flex items-center mb-4">
+                <div class="bg-blue-500 p-3 rounded-lg mr-4">
+                  <i class="fas fa-running text-white text-2xl"></i>
+                </div>
+                <h4 class="text-lg font-bold text-gray-800">
+                  Physical Education
+                </h4>
               </div>
-              <div class="absolute bottom-4 left-4">
-                <h4 class="text-xl font-bold text-white">Emotion Explorer</h4>
-              </div>
-            </div>
-            <div class="p-6">
               <p class="text-gray-600 mb-4">
-                Match facial expressions to emotions in this interactive social
-                skills game.
+                Adapted exercise videos for motor skill development and
+                coordination.
               </p>
+              <a
+                href="#"
+                class="text-blue-600 font-medium inline-flex items-center hover:text-blue-800"
+              >
+                Explore Videos <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
 
-              <div class="mb-6">
-                <div class="flex justify-between text-sm mb-1">
-                  <span class="text-gray-700">Game Progress</span>
-                  <span class="font-medium text-primary-600">45%</span>
+            <!-- Instructor-Led Activities -->
+            <div
+              class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 shadow-sm border border-purple-100"
+            >
+              <div class="flex items-center mb-4">
+                <div class="bg-purple-500 p-3 rounded-lg mr-4">
+                  <i class="fas fa-chalkboard-teacher text-white text-2xl"></i>
                 </div>
-                <div class="w-full bg-gray-200 rounded-full h-2">
-                  <div
-                    class="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full"
-                    style="width: 45%"
-                  ></div>
-                </div>
+                <h4 class="text-lg font-bold text-gray-800">
+                  Instructor-Led Activities
+                </h4>
               </div>
+              <p class="text-gray-600 mb-4">
+                Live and recorded sessions with special education instructors.
+              </p>
+              <a
+                href="#"
+                class="text-purple-600 font-medium inline-flex items-center hover:text-purple-800"
+              >
+                Join Sessions <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
 
-              <div class="flex items-center justify-between">
-                <div class="flex items-center text-gray-700">
-                  <i class="fas fa-mobile-alt mr-2 text-gray-500"></i>
-                  <span class="text-sm">Available on:</span>
+            <!-- Gamified Learning -->
+            <div
+              class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6 shadow-sm border border-green-100"
+            >
+              <div class="flex items-center mb-4">
+                <div class="bg-green-500 p-3 rounded-lg mr-4">
+                  <i class="fas fa-gamepad text-white text-2xl"></i>
                 </div>
-                <div class="flex space-x-2">
-                  <a
-                    href="#"
-                    class="bg-gray-100 hover:bg-gray-200 p-2 rounded-lg"
-                  >
-                    <i class="fab fa-google-play text-green-600"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="bg-gray-100 hover:bg-gray-200 p-2 rounded-lg"
-                  >
-                    <i class="fab fa-app-store-ios text-gray-800"></i>
-                  </a>
-                </div>
+                <h4 class="text-lg font-bold text-gray-800">
+                  Gamified Learning
+                </h4>
               </div>
+              <p class="text-gray-600 mb-4">
+                Interactive games designed to build cognitive and social skills.
+              </p>
+              <a
+                href="#"
+                class="text-green-600 font-medium inline-flex items-center hover:text-green-800"
+              >
+                Play Games <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- E-Learning Progress Analytics -->
+        <section class="mb-12">
+          <div class="flex justify-between items-center mb-6">
+            <h3 class="text-xl font-bold text-gray-800">E-Learning Progress</h3>
+            <a
+              href="#"
+              class="text-primary-600 font-medium hover:text-primary-800"
+              >View All Modules</a
+            >
+          </div>
+
+          <!-- Overall Progress -->
+          <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+            <h4 class="text-lg font-semibold text-gray-800 mb-4">
+              Overall Progress
+            </h4>
+            <div class="mb-2 flex justify-between">
+              <span class="text-gray-700">Completed: 12 of 20 modules</span>
+              <span class="font-bold text-primary-600">60%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-4">
+              <div
+                class="bg-gradient-to-r from-primary-500 to-primary-600 h-4 rounded-full progress-bar-fill"
+                style="width: 60%"
+              ></div>
             </div>
           </div>
 
-          <!-- Game 2 -->
-          <div
-            class="bg-white rounded-xl shadow-sm overflow-hidden card-hover transition-all duration-300"
-          >
+          <!-- Module Progress -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Module 1 -->
             <div
-              class="h-40 bg-gradient-to-r from-green-400 to-emerald-400 relative overflow-hidden"
+              class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-blue-500"
             >
-              <div
-                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')] bg-cover bg-center opacity-30"
-              ></div>
-              <div class="absolute top-4 left-4">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-800">
+                    Social Skills
+                  </h4>
+                  <p class="text-gray-600 text-sm">5 video lessons</p>
+                </div>
                 <span
-                  class="bg-green-600 text-white text-xs font-medium px-3 py-1 rounded-full"
-                  >Unlocked</span
+                  class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full"
+                  >Completed</span
                 >
               </div>
-              <div class="absolute bottom-4 left-4">
-                <h4 class="text-xl font-bold text-white">Math Adventure</h4>
-              </div>
-            </div>
-            <div class="p-6">
-              <p class="text-gray-600 mb-4">
-                Solve math problems to advance through levels in this engaging
-                adventure game.
-              </p>
-
-              <div class="mb-6">
+              <div class="mb-4">
                 <div class="flex justify-between text-sm mb-1">
-                  <span class="text-gray-700">Game Progress</span>
-                  <span class="font-medium text-primary-600">80%</span>
+                  <span>Progress</span>
+                  <span>100%</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2">
                   <div
-                    class="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full"
-                    style="width: 80%"
+                    class="bg-blue-500 h-2 rounded-full"
+                    style="width: 100%"
                   ></div>
                 </div>
               </div>
-
-              <div class="flex items-center justify-between">
-                <div class="flex items-center text-gray-700">
-                  <i class="fas fa-mobile-alt mr-2 text-gray-500"></i>
-                  <span class="text-sm">Available on:</span>
+              <p class="text-gray-600 mb-4">
+                Learn about emotions, greetings, and sharing with others.
+              </p>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center text-gray-600">
+                  <i class="fas fa-play-circle mr-2 text-blue-500"></i>
+                  <span class="text-sm">5 videos completed</span>
                 </div>
-                <div class="flex space-x-2">
-                  <a
-                    href="#"
-                    class="bg-gray-100 hover:bg-gray-200 p-2 rounded-lg"
-                  >
-                    <i class="fab fa-google-play text-green-600"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="bg-gray-100 hover:bg-gray-200 p-2 rounded-lg"
-                  >
-                    <i class="fab fa-app-store-ios text-gray-800"></i>
-                  </a>
-                </div>
+                <button class="text-blue-600 font-medium hover:text-blue-800">
+                  Unlocked: Social Game
+                </button>
               </div>
             </div>
-          </div>
 
-          <!-- Game 3 -->
-          <div
-            class="bg-white rounded-xl shadow-sm overflow-hidden card-hover transition-all duration-300"
-          >
+            <!-- Module 2 -->
             <div
-              class="h-40 bg-gradient-to-r from-purple-400 to-pink-400 relative overflow-hidden"
+              class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-green-500"
             >
-              <div
-                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')] bg-cover bg-center opacity-30"
-              ></div>
-              <div class="absolute top-4 left-4">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-800">
+                    Basic Math
+                  </h4>
+                  <p class="text-gray-600 text-sm">8 video lessons</p>
+                </div>
                 <span
-                  class="bg-gray-400 text-white text-xs font-medium px-3 py-1 rounded-full"
-                  >Locked</span
+                  class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full"
+                  >In Progress</span
                 >
               </div>
-              <div class="absolute bottom-4 left-4">
-                <h4 class="text-xl font-bold text-white">Word Builder</h4>
-              </div>
-            </div>
-            <div class="p-6">
-              <p class="text-gray-600 mb-4">
-                Build vocabulary by creating words from letters in this language
-                development game.
-              </p>
-
-              <div class="mb-6">
+              <div class="mb-4">
                 <div class="flex justify-between text-sm mb-1">
-                  <span class="text-gray-700">Game Progress</span>
-                  <span class="font-medium text-gray-500">0%</span>
+                  <span>Progress</span>
+                  <span>75%</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2">
                   <div
-                    class="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full"
+                    class="bg-green-500 h-2 rounded-full"
+                    style="width: 75%"
+                  ></div>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Counting, addition, and recognizing numbers.
+              </p>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center text-gray-600">
+                  <i class="fas fa-play-circle mr-2 text-green-500"></i>
+                  <span class="text-sm">6/8 videos completed</span>
+                </div>
+                <span class="text-gray-500 text-sm"
+                  >Complete module to unlock game</span
+                >
+              </div>
+            </div>
+
+            <!-- Module 3 -->
+            <div
+              class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-purple-500"
+            >
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-800">
+                    Language Development
+                  </h4>
+                  <p class="text-gray-600 text-sm">6 video lessons</p>
+                </div>
+                <span
+                  class="bg-purple-100 text-purple-800 text-xs font-medium px-3 py-1 rounded-full"
+                  >Not Started</span
+                >
+              </div>
+              <div class="mb-4">
+                <div class="flex justify-between text-sm mb-1">
+                  <span>Progress</span>
+                  <span>0%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    class="bg-purple-500 h-2 rounded-full"
                     style="width: 0%"
                   ></div>
                 </div>
-                <p class="text-xs text-gray-500 mt-2">
-                  Complete Language Development module to unlock
-                </p>
               </div>
-
-              <div class="flex items-center justify-between">
-                <div class="flex items-center text-gray-700">
-                  <i class="fas fa-mobile-alt mr-2 text-gray-500"></i>
-                  <span class="text-sm">Available on:</span>
+              <p class="text-gray-600 mb-4">
+                Vocabulary building and sentence formation.
+              </p>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center text-gray-600">
+                  <i class="fas fa-play-circle mr-2 text-purple-500"></i>
+                  <span class="text-sm">0/6 videos completed</span>
                 </div>
-                <div class="flex space-x-2">
-                  <a
-                    href="#"
-                    class="bg-gray-100 p-2 rounded-lg opacity-50 cursor-not-allowed"
+                <span class="text-gray-500 text-sm"
+                  >Complete module to unlock game</span
+                >
+              </div>
+            </div>
+
+            <!-- Module 4 -->
+            <div
+              class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-yellow-500"
+            >
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-800">
+                    Daily Living Skills
+                  </h4>
+                  <p class="text-gray-600 text-sm">4 video lessons</p>
+                </div>
+                <span
+                  class="bg-yellow-100 text-yellow-800 text-xs font-medium px-3 py-1 rounded-full"
+                  >In Progress</span
+                >
+              </div>
+              <div class="mb-4">
+                <div class="flex justify-between text-sm mb-1">
+                  <span>Progress</span>
+                  <span>50%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    class="bg-yellow-500 h-2 rounded-full"
+                    style="width: 50%"
+                  ></div>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Brushing teeth, getting dressed, and basic chores.
+              </p>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center text-gray-600">
+                  <i class="fas fa-play-circle mr-2 text-yellow-500"></i>
+                  <span class="text-sm">2/4 videos completed</span>
+                </div>
+                <span class="text-gray-500 text-sm"
+                  >Complete module to unlock game</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gamified Learning Section -->
+        <section>
+          <div class="flex justify-between items-center mb-6">
+            <h3 class="text-xl font-bold text-gray-800">
+              Gamified Learning Activities
+            </h3>
+            <a
+              href="#"
+              class="text-primary-600 font-medium hover:text-primary-800"
+              >View All Games</a
+            >
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Game 1 -->
+            <div
+              class="bg-white rounded-xl shadow-sm overflow-hidden card-hover transition-all duration-300"
+            >
+              <div
+                class="h-40 bg-gradient-to-r from-blue-400 to-cyan-400 relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')] bg-cover bg-center opacity-30"
+                ></div>
+                <div class="absolute top-4 left-4">
+                  <span
+                    class="bg-blue-600 text-white text-xs font-medium px-3 py-1 rounded-full"
+                    >Unlocked</span
                   >
-                    <i class="fab fa-google-play text-gray-400"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="bg-gray-100 p-2 rounded-lg opacity-50 cursor-not-allowed"
+                </div>
+                <div class="absolute bottom-4 left-4">
+                  <h4 class="text-xl font-bold text-white">Emotion Explorer</h4>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 mb-4">
+                  Match facial expressions to emotions in this interactive
+                  social skills game.
+                </p>
+
+                <div class="mb-6">
+                  <div class="flex justify-between text-sm mb-1">
+                    <span class="text-gray-700">Game Progress</span>
+                    <span class="font-medium text-primary-600">45%</span>
+                  </div>
+                  <div class="w-full bg-gray-200 rounded-full h-2">
+                    <div
+                      class="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full"
+                      style="width: 45%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center text-gray-700">
+                    <i class="fas fa-mobile-alt mr-2 text-gray-500"></i>
+                    <span class="text-sm">Available on:</span>
+                  </div>
+                  <div class="flex space-x-2">
+                    <a
+                      href="#"
+                      class="bg-gray-100 hover:bg-gray-200 p-2 rounded-lg"
+                    >
+                      <i class="fab fa-google-play text-green-600"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-gray-100 hover:bg-gray-200 p-2 rounded-lg"
+                    >
+                      <i class="fab fa-app-store-ios text-gray-800"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Game 2 -->
+            <div
+              class="bg-white rounded-xl shadow-sm overflow-hidden card-hover transition-all duration-300"
+            >
+              <div
+                class="h-40 bg-gradient-to-r from-green-400 to-emerald-400 relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')] bg-cover bg-center opacity-30"
+                ></div>
+                <div class="absolute top-4 left-4">
+                  <span
+                    class="bg-green-600 text-white text-xs font-medium px-3 py-1 rounded-full"
+                    >Unlocked</span
                   >
-                    <i class="fab fa-app-store-ios text-gray-400"></i>
-                  </a>
+                </div>
+                <div class="absolute bottom-4 left-4">
+                  <h4 class="text-xl font-bold text-white">Math Adventure</h4>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 mb-4">
+                  Solve math problems to advance through levels in this engaging
+                  adventure game.
+                </p>
+
+                <div class="mb-6">
+                  <div class="flex justify-between text-sm mb-1">
+                    <span class="text-gray-700">Game Progress</span>
+                    <span class="font-medium text-primary-600">80%</span>
+                  </div>
+                  <div class="w-full bg-gray-200 rounded-full h-2">
+                    <div
+                      class="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center text-gray-700">
+                    <i class="fas fa-mobile-alt mr-2 text-gray-500"></i>
+                    <span class="text-sm">Available on:</span>
+                  </div>
+                  <div class="flex space-x-2">
+                    <a
+                      href="#"
+                      class="bg-gray-100 hover:bg-gray-200 p-2 rounded-lg"
+                    >
+                      <i class="fab fa-google-play text-green-600"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-gray-100 hover:bg-gray-200 p-2 rounded-lg"
+                    >
+                      <i class="fab fa-app-store-ios text-gray-800"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Game 3 -->
+            <div
+              class="bg-white rounded-xl shadow-sm overflow-hidden card-hover transition-all duration-300"
+            >
+              <div
+                class="h-40 bg-gradient-to-r from-purple-400 to-pink-400 relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')] bg-cover bg-center opacity-30"
+                ></div>
+                <div class="absolute top-4 left-4">
+                  <span
+                    class="bg-gray-400 text-white text-xs font-medium px-3 py-1 rounded-full"
+                    >Locked</span
+                  >
+                </div>
+                <div class="absolute bottom-4 left-4">
+                  <h4 class="text-xl font-bold text-white">Word Builder</h4>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 mb-4">
+                  Build vocabulary by creating words from letters in this
+                  language development game.
+                </p>
+
+                <div class="mb-6">
+                  <div class="flex justify-between text-sm mb-1">
+                    <span class="text-gray-700">Game Progress</span>
+                    <span class="font-medium text-gray-500">0%</span>
+                  </div>
+                  <div class="w-full bg-gray-200 rounded-full h-2">
+                    <div
+                      class="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full"
+                      style="width: 0%"
+                    ></div>
+                  </div>
+                  <p class="text-xs text-gray-500 mt-2">
+                    Complete Language Development module to unlock
+                  </p>
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center text-gray-700">
+                    <i class="fas fa-mobile-alt mr-2 text-gray-500"></i>
+                    <span class="text-sm">Available on:</span>
+                  </div>
+                  <div class="flex space-x-2">
+                    <a
+                      href="#"
+                      class="bg-gray-100 p-2 rounded-lg opacity-50 cursor-not-allowed"
+                    >
+                      <i class="fab fa-google-play text-gray-400"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="bg-gray-100 p-2 rounded-lg opacity-50 cursor-not-allowed"
+                    >
+                      <i class="fab fa-app-store-ios text-gray-400"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </div>
 
     <script src="js/script.js"></script>
   </body>
